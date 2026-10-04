@@ -1,0 +1,658 @@
+{
+  "company": {
+    "name": "Apurbo Trade International",
+    "shortName": "ATI",
+    "legalName": "APURBO TRADE INTERNATIONAL",
+    "tagline": "First Class Contractor & Supplier",
+    "businessType": "Proprietorship",
+
+    "natureOfBusiness": [
+      "Contractor",
+      "Importer",
+      "Supplier",
+      "Engineering Service Provider"
+    ],
+
+    "proprietor": {
+      "name": "Mr. Anowar Hossain",
+      "designation": "Proprietor"
+    },
+
+    "foundedDescription": "A Bangladesh-based contractor, supplier and engineering service provider serving construction, procurement, industrial and technical requirements.",
+
+    "positioning": "Contracting, engineering, procurement and industrial supply solutions for construction, infrastructure and business needs."
+  },
+
+  "contact": {
+    "headOffice": {
+      "addressLine1": "K-99, Namapara, Water Pump",
+      "addressLine2": "Namapara, Khilkhet, Dhaka-1229",
+      "city": "Dhaka",
+      "country": "Bangladesh",
+      "fullAddress": "K-99, Namapara, Water Pump, Namapara, Khilkhet, Dhaka-1229, Bangladesh"
+    },
+
+    "phone": {
+      "cell": "+8801680 966570",
+      "office": "+8801715 659599"
+    },
+
+    "email": "apurbotradei@gmail.com",
+
+    "website": "www.apurbotradeinternational.com",
+
+    "businessHours": {
+      "days": "Saturday - Thursday",
+      "time": "9:00 AM - 6:00 PM"
+    }
+  },
+
+  "brand": {
+    "primaryColor": "#082B55",
+    "secondaryColor": "#F7941D",
+    "accentGreen": "#159447",
+    "accentRed": "#ED1C24",
+    "background": "#F7F9FC",
+    "text": "#111827"
+  },
+
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About Us",
+      "href": "/about"
+    },
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Projects",
+      "href": "/projects"
+    },
+    {
+      "label": "Credentials",
+      "href": "/credentials"
+    },
+    {
+      "label": "Why Choose Us",
+      "href": "/why-us"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+
+  "hero": {
+    "eyebrow": "APURBO TRADE INTERNATIONAL",
+
+    "title": "Building Trust Through Quality, Reliability & Excellence",
+
+    "subtitle": "A trusted contractor, supplier and engineering service provider delivering construction, procurement, industrial and technical solutions.",
+
+    "primaryCta": {
+      "label": "Explore Our Services",
+      "href": "/services"
+    },
+
+    "secondaryCta": {
+      "label": "Request a Quote",
+      "href": "/contact"
+    },
+
+    "image": "/images/hero/construction-hero.webp"
+  },
+
+  "trustPoints": [
+    {
+      "title": "Quality Products",
+      "description": "Committed to delivering quality products and services."
+    },
+    {
+      "title": "Timely Delivery",
+      "description": "Focused on dependable project and supply delivery."
+    },
+    {
+      "title": "Competitive Pricing",
+      "description": "Practical and competitive solutions for clients."
+    },
+    {
+      "title": "Customer Satisfaction",
+      "description": "Client needs remain at the center of our work."
+    }
+  ],
+
+  "about": {
+    "shortTitle": "About Apurbo Trade International",
+
+    "title": "Building Trust Through Quality, Reliability & Professional Excellence",
+
+    "shortDescription": "Apurbo Trade International is a Bangladesh-based contractor, supplier and engineering service provider working across construction, procurement, industrial and technical solution areas.",
+
+    "description": "We are committed to delivering quality products and professional services with integrity, reliability and customer-focused execution. Our business activities cover construction and engineering, procurement and supply, industrial and mechanical solutions, HVAC solutions, fire safety systems and related technical services.",
+
+    "image": "/images/company/company-overview.webp",
+
+    "cta": {
+      "label": "Learn More About Us",
+      "href": "/about"
+    }
+  },
+
+  "businessActivities": [
+    {
+      "id": "construction-engineering",
+      "slug": "construction-engineering",
+      "title": "Construction & Engineering",
+      "shortDescription": "Construction and engineering support for infrastructure and built-environment projects.",
+      "icon": "construction",
+      "image": "/images/services/construction-engineering.webp"
+    },
+
+    {
+      "id": "procurement-supply",
+      "slug": "procurement-supply",
+      "title": "Procurement & Supply",
+      "shortDescription": "Procurement, general order supply and sourcing support for projects and organizations.",
+      "icon": "package",
+      "image": "/images/services/procurement-supply.webp"
+    },
+
+    {
+      "id": "industrial-mechanical",
+      "slug": "industrial-mechanical",
+      "title": "Industrial & Mechanical Solutions",
+      "shortDescription": "Industrial equipment, mechanical products and technical supply solutions.",
+      "icon": "settings",
+      "image": "/images/services/industrial-mechanical.webp"
+    },
+
+    {
+      "id": "hvac-solutions",
+      "slug": "hvac-solutions",
+      "title": "HVAC Solutions",
+      "shortDescription": "HVAC equipment, air-conditioning related products and technical solutions.",
+      "icon": "snowflake",
+      "image": "/images/services/hvac-solutions.webp"
+    },
+
+    {
+      "id": "fire-safety",
+      "slug": "fire-safety",
+      "title": "Fire Safety & Protection",
+      "shortDescription": "Fire fighting equipment and fire protection system solutions.",
+      "icon": "flame",
+      "image": "/images/services/fire-safety.webp"
+    },
+
+    {
+      "id": "electrical-electromechanical",
+      "slug": "electrical-electromechanical",
+      "title": "Electrical & Electromechanical",
+      "shortDescription": "Electrical and electromechanical equipment and related project support.",
+      "icon": "zap",
+      "image": "/images/services/electrical-electromechanical.webp"
+    }
+  ],
+
+  "services": [
+    {
+      "id": "service-001",
+      "slug": "construction-engineering",
+      "title": "Construction & Engineering",
+      "category": "Construction",
+
+      "summary": "Construction and engineering services supporting infrastructure and project execution.",
+
+      "description": "We provide construction and engineering support for civil and infrastructure-related works, with a focus on quality, reliability, safety and timely execution.",
+
+      "capabilities": [
+        "Civil construction support",
+        "Road and infrastructure works",
+        "Construction material supply",
+        "Project execution support",
+        "Infrastructure maintenance support"
+      ],
+
+      "image": "/images/services/construction-engineering.webp"
+    },
+
+    {
+      "id": "service-002",
+      "slug": "procurement-general-supply",
+      "title": "Procurement & General Supply",
+      "category": "Procurement",
+
+      "summary": "Procurement and general supply services for construction, infrastructure and organizational requirements.",
+
+      "description": "We support procurement and supply requirements by sourcing and delivering project materials and general-order items according to client requirements.",
+
+      "capabilities": [
+        "General order supply",
+        "Construction material supply",
+        "Procurement support",
+        "Local sourcing",
+        "Project-based material delivery"
+      ],
+
+      "image": "/images/services/procurement-supply.webp"
+    },
+
+    {
+      "id": "service-003",
+      "slug": "industrial-mechanical-solutions",
+      "title": "Industrial & Mechanical Solutions",
+      "category": "Industrial",
+
+      "summary": "Industrial and mechanical equipment supply and technical support.",
+
+      "description": "We provide industrial and mechanical products and technical supply solutions for organizations and projects requiring dependable equipment and components.",
+
+      "capabilities": [
+        "Industrial equipment supply",
+        "Mechanical equipment",
+        "Pumps and related equipment",
+        "Machinery and components",
+        "Technical procurement support"
+      ],
+
+      "image": "/images/services/industrial-mechanical.webp"
+    },
+
+    {
+      "id": "service-004",
+      "slug": "hvac-solutions",
+      "title": "HVAC Solutions",
+      "category": "HVAC",
+
+      "summary": "HVAC and air-conditioning related products and solutions.",
+
+      "description": "Our HVAC offering covers air-conditioning equipment, accessories and related technical supply requirements.",
+
+      "capabilities": [
+        "Air-conditioning equipment",
+        "HVAC equipment supply",
+        "HVAC accessories",
+        "Technical sourcing",
+        "Project supply support"
+      ],
+
+      "image": "/images/services/hvac-solutions.webp"
+    },
+
+    {
+      "id": "service-005",
+      "slug": "fire-safety-protection",
+      "title": "Fire Safety & Protection Systems",
+      "category": "Fire Safety",
+
+      "summary": "Fire fighting equipment and fire protection solutions.",
+
+      "description": "We support fire safety requirements through fire fighting equipment and protection-system related products and supply services.",
+
+      "capabilities": [
+        "Fire fighting equipment",
+        "Fire protection products",
+        "Safety equipment supply",
+        "Project-based fire safety procurement"
+      ],
+
+      "image": "/images/services/fire-safety.webp"
+    },
+
+    {
+      "id": "service-006",
+      "slug": "electrical-electromechanical",
+      "title": "Electrical & Electromechanical Solutions",
+      "category": "Electrical",
+
+      "summary": "Electrical and electromechanical equipment supply and project support.",
+
+      "description": "We provide electrical and electromechanical equipment and procurement support for project and organizational requirements.",
+
+      "capabilities": [
+        "Electrical equipment",
+        "Electromechanical equipment",
+        "Project procurement",
+        "Equipment sourcing",
+        "Technical supply support"
+      ],
+
+      "image": "/images/services/electrical-electromechanical.webp"
+    }
+  ],
+
+  "visionMission": {
+    "vision": "To be recognized as one of Bangladesh's most trusted and preferred contracting, engineering and supply companies by delivering superior value, innovative solutions and sustainable growth.",
+
+    "mission": "To provide high-quality products and services through professionalism, integrity, advanced technology and a skilled team, ensuring customer satisfaction, timely delivery and continuous improvement in all our business activities."
+  },
+
+  "coreValues": [
+    {
+      "id": "integrity",
+      "title": "Integrity",
+      "description": "We conduct our business with honesty, transparency and strong moral principles.",
+      "icon": "shield-check"
+    },
+
+    {
+      "id": "quality",
+      "title": "Quality",
+      "description": "We are committed to delivering the highest quality in every product and service.",
+      "icon": "badge-check"
+    },
+
+    {
+      "id": "innovation",
+      "title": "Innovation",
+      "description": "We embrace new ideas and innovative solutions to improve the way we work.",
+      "icon": "lightbulb"
+    },
+
+    {
+      "id": "safety",
+      "title": "Safety",
+      "description": "We prioritize the safety of people, assets and the environment.",
+      "icon": "hard-hat"
+    },
+
+    {
+      "id": "teamwork",
+      "title": "Teamwork",
+      "description": "We believe in strong collaboration, mutual respect and long-term partnerships.",
+      "icon": "users"
+    },
+
+    {
+      "id": "excellence",
+      "title": "Excellence",
+      "description": "We strive for continuous improvement in everything we do.",
+      "icon": "trophy"
+    }
+  ],
+
+  "whyChooseUs": [
+    {
+      "id": "quality-assurance",
+      "title": "Quality Assurance",
+      "description": "We supply high-quality products and deliver services that meet professional requirements."
+    },
+
+    {
+      "id": "experienced-professionals",
+      "title": "Experienced & Professional Team",
+      "description": "We combine practical project experience, technical capability and professional coordination."
+    },
+
+    {
+      "id": "timely-delivery",
+      "title": "Timely Delivery",
+      "description": "We focus on completing projects and supplying materials within agreed schedules."
+    },
+
+    {
+      "id": "competitive-pricing",
+      "title": "Competitive Pricing",
+      "description": "We aim to provide cost-effective solutions without compromising quality."
+    },
+
+    {
+      "id": "reliability-trust",
+      "title": "Reliability & Trust",
+      "description": "We value honesty, transparency and consistent performance in long-term business relationships."
+    },
+
+    {
+      "id": "safety-compliance",
+      "title": "Safety & Compliance",
+      "description": "We prioritize safety and responsible execution across project and supply activities."
+    },
+
+    {
+      "id": "wide-range-services",
+      "title": "Wide Range of Products & Services",
+      "description": "Our capabilities span contracting, procurement, engineering and multiple technical supply categories."
+    },
+
+    {
+      "id": "customer-satisfaction",
+      "title": "Customer Satisfaction",
+      "description": "We put client requirements, communication and service quality at the center of our work."
+    }
+  ],
+
+  "proprietorMessage": {
+    "name": "Mr. Anowar Hossain",
+    "designation": "Proprietor",
+
+    "title": "Message from the Proprietor",
+
+    "intro": "Welcome to Apurbo Trade International.",
+
+    "message": "It is my pleasure to introduce Apurbo Trade International, a progressive company committed to providing reliable contracting, engineering, procurement and supply solutions. Since our inception, we have remained focused on delivering quality products and professional services that contribute to the success of our valued clients.",
+
+    "closing": "We look forward to building lasting partnerships through quality, reliability, innovation and excellence.",
+
+    "image": "/images/proprietor/anowar-hossain.webp"
+  },
+
+  "projects": [
+    {
+      "id": "project-001",
+      "slug": "airport-road-beautification-road-median-footpath-drain",
+      "title": "Airport Road Beautification",
+      "category": "Road & Infrastructure",
+
+      "client": "Abaid Monsur Constructions",
+
+      "location": "Airport Road, Khilkhet to Le-Meridian",
+
+      "scope": [
+        "Construction of road median",
+        "Footpath construction",
+        "Saucer drain construction"
+      ],
+
+      "workOrderNo": "AMC-221",
+      "certificateNo": "221",
+
+      "completionDate": "2022-03-12",
+
+      "contractValue": "BDT 8,536,300.00",
+
+      "description": "Completed road beautification-related construction work including road median, footpath and saucer drain at Khilkhet to Le-Meridian.",
+
+      "certificateImage": "/documents/certificates/project-001.webp",
+
+      "images": []
+    },
+
+    {
+      "id": "project-002",
+      "slug": "airport-road-beautification-material-supply",
+
+      "title": "Airport Road Beautification Material Supply",
+
+      "category": "Procurement & Supply",
+
+      "client": "Abaid Monsur Constructions",
+
+      "location": "Airport Road",
+
+      "scope": [
+        "Supply of local sand",
+        "Supply of 20mm down graded stone chips",
+        "Supply of 16mm down graded stone chips",
+        "Supply of 12mm down graded stone chips",
+        "Supply of coarse sand",
+        "Supply of 6500 PSI Uniblock"
+      ],
+
+      "workOrderNo": "AMC-225",
+      "certificateNo": "225",
+
+      "completionDate": "2022-03-14",
+
+      "contractValue": "BDT 19,610,000.00",
+
+      "description": "Completed a project-based construction material supply package for Airport Road Beautification works.",
+
+      "certificateImage": "/documents/certificates/project-002.webp",
+
+      "images": []
+    },
+
+    {
+      "id": "project-003",
+      "slug": "birulia-ashulia-5km-rigid-pavement",
+
+      "title": "Birulia-Ashulia 5 KM Rigid Pavement Work",
+
+      "category": "Road & Infrastructure",
+
+      "client": "Abaid Monsur Constructions",
+
+      "location": "Birulia-Ashulia Road",
+
+      "scope": [
+        "Supply of local sand",
+        "Supply of 20mm down graded stone chips",
+        "Supply of 16mm down graded stone chips",
+        "Supply of 12mm down graded stone chips",
+        "Supply of coarse sand"
+      ],
+
+      "workOrderNo": "AMC-329",
+      "certificateNo": "329",
+
+      "completionDate": "2023-05-29",
+
+      "contractValue": "BDT 24,500,000.00",
+
+      "description": "Completed material supply work associated with the Birulia-Ashulia 5 KM rigid pavement project.",
+
+      "certificateImage": "/documents/certificates/project-003.webp",
+
+      "images": []
+    },
+
+    {
+      "id": "project-004",
+      "slug": "dhaka-aricha-national-highway",
+
+      "title": "Dhaka-Aricha National Highway",
+
+      "category": "Road & Infrastructure",
+
+      "client": "Abaid Monsur Constructions",
+
+      "location": "Aricha Road",
+
+      "scope": [
+        "Construction of road median",
+        "Guide wall",
+        "U-loop",
+        "M.S/S.S fencing"
+      ],
+
+      "workOrderNo": "AMC-330",
+      "certificateNo": "330",
+
+      "completionDate": "2023-05-28",
+
+      "contractValue": "BDT 11,500,000.00",
+
+      "description": "Completed road infrastructure work including road median, guide wall, U-loop and M.S/S.S fencing at Aricha Road.",
+
+      "certificateImage": "/documents/certificates/project-004.webp",
+
+      "images": []
+    }
+  ],
+
+  "credentials": [
+    {
+      "id": "trade-license",
+      "title": "Trade License",
+      "type": "Business Registration",
+      "description": "Trade License document for Apurbo Trade International.",
+      "document": "/documents/certificates/trade-license.webp",
+      "publicDisplay": true
+    },
+
+    {
+      "id": "vat-certificate",
+      "title": "VAT Certificate",
+      "type": "VAT Registration",
+      "description": "Value Added Tax Registration Certificate issued by the National Board of Revenue.",
+      "document": "/documents/certificates/vat-certificate.webp",
+      "publicDisplay": true
+    },
+
+    {
+      "id": "tin-certificate",
+      "title": "TIN Certificate",
+      "type": "Tax Identification",
+      "description": "Taxpayer Identification Number certificate issued by the National Board of Revenue.",
+      "document": "/documents/certificates/tin-certificate.webp",
+      "publicDisplay": true
+    },
+
+    {
+      "id": "work-completion-certificates",
+      "title": "Work Completion Certificates",
+      "type": "Experience & Project Credentials",
+      "description": "Completed project certificates documenting previous construction, infrastructure and material supply work.",
+      "document": "/documents/certificates/",
+      "publicDisplay": true
+    }
+  ],
+
+  "socialLinks": {
+    "facebook": "",
+    "linkedin": "",
+    "youtube": "",
+    "whatsapp": ""
+  },
+
+  "contactCta": {
+    "title": "Let's Build a Stronger Tomorrow Together",
+
+    "description": "Have a project, procurement requirement or business inquiry? Get in touch with Apurbo Trade International.",
+
+    "buttonLabel": "Request a Quote",
+
+    "buttonHref": "/contact"
+  },
+
+  "footer": {
+    "tagline": "First Class Contractor & Supplier",
+
+    "copyright": "© 2026 Apurbo Trade International. All Rights Reserved."
+  },
+
+  "seo": {
+    "siteTitle": "Apurbo Trade International | Contractor & Supplier",
+
+    "defaultDescription": "Apurbo Trade International is a Bangladesh-based contractor, supplier and engineering service provider offering construction, procurement, industrial, HVAC, fire safety and technical solutions.",
+
+    "keywords": [
+      "Apurbo Trade International",
+      "contractor Bangladesh",
+      "supplier Bangladesh",
+      "construction company Bangladesh",
+      "engineering service provider Bangladesh",
+      "procurement and supply Bangladesh",
+      "industrial equipment supplier Bangladesh",
+      "HVAC solutions Bangladesh",
+      "fire safety equipment Bangladesh"
+    ],
+
+    "ogImage": "/images/og/og-image.webp"
+  }
+}
