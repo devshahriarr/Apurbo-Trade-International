@@ -150,7 +150,7 @@
       "title": "Construction & Engineering",
       "shortDescription": "Construction and engineering support for infrastructure and built-environment projects.",
       "icon": "construction",
-      "image": "/images/services/construction-engineering.webp"
+      "image": "/images/services/Construction & Engineering.jpg"
     },
 
     {
@@ -159,7 +159,7 @@
       "title": "Procurement & Supply",
       "shortDescription": "Procurement, general order supply and sourcing support for projects and organizations.",
       "icon": "package",
-      "image": "/images/services/procurement-supply.webp"
+      "image": "/images/services/Procurement & Supply.jpg"
     },
 
     {
@@ -168,7 +168,7 @@
       "title": "Industrial & Mechanical Solutions",
       "shortDescription": "Industrial equipment, mechanical products and technical supply solutions.",
       "icon": "settings",
-      "image": "/images/services/industrial-mechanical.webp"
+      "image": "/images/services/Industrial & Mechanical Solutions.jpg"
     },
 
     {
@@ -177,7 +177,7 @@
       "title": "HVAC Solutions",
       "shortDescription": "HVAC equipment, air-conditioning related products and technical solutions.",
       "icon": "snowflake",
-      "image": "/images/services/hvac-solutions.webp"
+      "image": "/images/services/HVAC Solutions.jpg"
     },
 
     {
@@ -186,7 +186,7 @@
       "title": "Fire Safety & Protection",
       "shortDescription": "Fire fighting equipment and fire protection system solutions.",
       "icon": "flame",
-      "image": "/images/services/fire-safety.webp"
+      "image": "/images/services/Fire Safety & Protection.jpg"
     },
 
     {
@@ -195,7 +195,7 @@
       "title": "Electrical & Electromechanical",
       "shortDescription": "Electrical and electromechanical equipment and related project support.",
       "icon": "zap",
-      "image": "/images/services/electrical-electromechanical.webp"
+      "image": "/images/services/Electrical & Electromechanical.jpg"
     }
   ],
 
@@ -218,7 +218,7 @@
         "Infrastructure maintenance support"
       ],
 
-      "image": "/images/services/construction-engineering.webp"
+      "image": "/images/services/Construction & Engineering.jpg"
     },
 
     {
@@ -239,7 +239,7 @@
         "Project-based material delivery"
       ],
 
-      "image": "/images/services/procurement-supply.webp"
+      "image": "/images/services/Procurement & Supply.jpg"
     },
 
     {
@@ -260,7 +260,7 @@
         "Technical procurement support"
       ],
 
-      "image": "/images/services/industrial-mechanical.webp"
+      "image": "/images/services/Industrial & Mechanical Solutions.jpg"
     },
 
     {
@@ -281,7 +281,7 @@
         "Project supply support"
       ],
 
-      "image": "/images/services/hvac-solutions.webp"
+      "image": "/images/services/HVAC Solutions.jpg"
     },
 
     {
@@ -301,7 +301,7 @@
         "Project-based fire safety procurement"
       ],
 
-      "image": "/images/services/fire-safety.webp"
+      "image": "/images/services/Fire Safety & Protection.jpg"
     },
 
     {
@@ -322,7 +322,7 @@
         "Technical supply support"
       ],
 
-      "image": "/images/services/electrical-electromechanical.webp"
+      "image": "/images/services/Electrical & Electromechanical.jpg"
     }
   ],
 

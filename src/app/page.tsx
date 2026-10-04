@@ -1,15 +1,31 @@
+import Hero from "@/components/home/Hero";
+import TrustPoints from "@/components/home/TrustPoints";
+import AboutPreview from "@/components/home/AboutPreview";
+import BusinessActivities from "@/components/home/BusinessActivities";
+import ServicesPreview from "@/components/home/ServicesPreview";
+import FeaturedProjects from "@/components/home/FeaturedProjects";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
+import VisionMission from "@/components/home/VisionMission";
+import CoreValues from "@/components/home/CoreValues";
+import ProprietorMessage from "@/components/home/ProprietorMessage";
+import CredentialsPreview from "@/components/home/CredentialsPreview";
+import ContactCTA from "@/components/home/ContactCTA";
+
 export default function Home() {
   return (
-    <section className="ati-section">
-      <div className="ati-container">
-        <h1 className="text-4xl font-bold text-ati-navy">
-          Apurbo Trade International
-        </h1>
-
-        <p className="mt-4 text-ati-muted">
-          First Class Contractor & Supplier
-        </p>
-      </div>
-    </section>
+    <>
+      <Hero />
+      <TrustPoints />
+      <AboutPreview />
+      <BusinessActivities />
+      <ServicesPreview />
+      <FeaturedProjects />
+      <WhyChooseUs />
+      <VisionMission />
+      <CoreValues />
+      <ProprietorMessage />
+      <CredentialsPreview />
+      <ContactCTA />
+    </>
   );
 }
