@@ -1,0 +1,295 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  OWNER
+  ADMIN
+  OPERATOR
+  VIEWER
+}
+
+enum PartyType {
+  CUSTOMER
+  SUPPLIER
+  CONTRACTOR
+  BOTH
+  OTHER
+}
+
+enum ProjectType {
+  TENDER
+  LOCAL
+}
+
+enum ProjectStatus {
+  PLANNING
+  ACTIVE
+  COMPLETED
+  CANCELLED
+}
+
+enum DocumentType {
+  INVOICE
+  DELIVERY_CHALLAN
+  CASH_MEMO
+  MONEY_RECEIPT
+  QUOTATION
+  PURCHASE_ORDER
+  WORK_ORDER
+  OTHER
+}
+
+enum DocumentStatus {
+  DRAFT
+  ISSUED
+  CANCELLED
+}
+
+enum DesignVariant {
+  ORIGINAL
+  MODERN
+}
+
+enum DiscountType {
+  FIXED
+  PERCENTAGE
+}
+
+enum PartyRole {
+  CUSTOMER
+  SUPPLIER
+  CONTRACTOR
+  RECEIVER
+  OTHER
+}
+
+model User {
+  id           String           @id @default(uuid()) @db.Uuid
+  name         String
+  email        String           @unique
+  passwordHash String
+  isActive     Boolean          @default(true)
+  memberships  BusinessMember[]
+  createdDocs  Document[]       @relation("DocumentCreator")
+  auditLogs    AuditLog[]
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+}
+
+model BusinessMember {
+  id         String   @id @default(uuid()) @db.Uuid
+  userId     String   @db.Uuid
+  businessId String   @db.Uuid
+  role       UserRole @default(OPERATOR)
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  business   Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, businessId])
+  @@index([businessId])
+}
+
+model Business {
+  id         String             @id @default(uuid()) @db.Uuid
+  name       String
+  nameBn     String?
+  logo       String?
+  address    String?
+  phone      String?
+  email      String?
+  website    String?
+  footerText String?
+  currency   String             @default("BDT")
+  isActive   Boolean            @default(true)
+  members    BusinessMember[]
+  parties    Party[]
+  projects   Project[]
+  products   Product[]
+  documents  Document[]
+  sequences  DocumentSequence[]
+  templates  DocumentTemplate[]
+  createdAt  DateTime           @default(now())
+  updatedAt  DateTime           @updatedAt
+
+  @@index([isActive])
+}
+
+model Party {
+  id            String     @id @default(uuid()) @db.Uuid
+  businessId    String     @db.Uuid
+  name          String
+  companyName   String?
+  partyType     PartyType  @default(CUSTOMER)
+  contactPerson String?
+  phone         String?
+  email         String?
+  address       String?
+  taxId         String?
+  notes         String?
+  isActive      Boolean    @default(true)
+  business      Business   @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  projects      Project[]
+  documents     Document[]
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@unique([businessId, email])
+  @@index([businessId, name])
+}
+
+model Project {
+  id              String        @id @default(uuid()) @db.Uuid
+  businessId      String        @db.Uuid
+  partyId         String?       @db.Uuid
+  name            String
+  projectType     ProjectType
+  tenderNumber    String?
+  tenderId        String?
+  workOrderNumber String?
+  department      String?
+  location        String?
+  description     String?
+  startDate       DateTime?
+  endDate         DateTime?
+  status          ProjectStatus @default(PLANNING)
+  business        Business      @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  party           Party?        @relation(fields: [partyId], references: [id], onDelete: SetNull)
+  documents       Document[]
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([businessId, projectType, status])
+}
+
+model Product {
+  id          String         @id @default(uuid()) @db.Uuid
+  businessId  String         @db.Uuid
+  name        String
+  description String?
+  sku         String?
+  unit        String?
+  defaultRate Decimal?       @db.Decimal(14, 2)
+  isActive    Boolean        @default(true)
+  business    Business       @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  items       DocumentItem[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  @@unique([businessId, sku])
+  @@index([businessId, name])
+}
+
+model Document {
+  id                 String            @id @default(uuid()) @db.Uuid
+  businessId         String            @db.Uuid
+  partyId            String?           @db.Uuid
+  projectId          String?           @db.Uuid
+  templateId         String?           @db.Uuid
+  createdById        String            @db.Uuid
+  documentType       DocumentType
+  documentNumber     String?
+  documentDate       DateTime          @default(now())
+  validUntil         DateTime?
+  referenceNumber    String?
+  subject            String?
+  partyRole          PartyRole         @default(CUSTOMER)
+  businessSnapshot   Json
+  partySnapshot      Json?
+  subtotal           Decimal?          @db.Decimal(14, 2)
+  discountType       DiscountType?
+  discountValue      Decimal?          @db.Decimal(14, 2)
+  discountAmount     Decimal?          @db.Decimal(14, 2)
+  taxRate            Decimal?          @db.Decimal(7, 4)
+  taxAmount          Decimal?          @db.Decimal(14, 2)
+  totalAmount        Decimal?          @db.Decimal(14, 2)
+  amountInWords      String?
+  notes              String?
+  terms              String?
+  customFields       Json              @default("{}")
+  status             DocumentStatus    @default(DRAFT)
+  issuedAt           DateTime?
+  cancelledAt        DateTime?
+  cancellationReason String?
+  business           Business          @relation(fields: [businessId], references: [id], onDelete: Restrict)
+  party              Party?            @relation(fields: [partyId], references: [id], onDelete: SetNull)
+  project            Project?          @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  template           DocumentTemplate? @relation(fields: [templateId], references: [id], onDelete: SetNull)
+  createdBy          User              @relation("DocumentCreator", fields: [createdById], references: [id], onDelete: Restrict)
+  items              DocumentItem[]
+  auditLogs          AuditLog[]
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
+
+  @@unique([businessId, documentType, documentNumber])
+  @@index([businessId, documentType, status, documentDate])
+  @@index([partyId, projectId])
+}
+
+model DocumentItem {
+  id          String   @id @default(uuid()) @db.Uuid
+  documentId  String   @db.Uuid
+  productId   String?  @db.Uuid
+  description String
+  quantity    Decimal  @db.Decimal(14, 3)
+  unit        String?
+  rate        Decimal? @db.Decimal(14, 2)
+  amount      Decimal? @db.Decimal(14, 2)
+  remarks     String?
+  sortOrder   Int      @default(0)
+  document    Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  product     Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+
+  @@index([documentId, sortOrder])
+}
+
+model DocumentSequence {
+  id           String       @id @default(uuid()) @db.Uuid
+  businessId   String       @db.Uuid
+  documentType DocumentType
+  fiscalYear   String
+  prefix       String
+  lastNumber   Int          @default(0)
+  padding      Int          @default(4)
+  business     Business     @relation(fields: [businessId], references: [id], onDelete: Cascade)
+
+  @@unique([businessId, documentType, fiscalYear])
+}
+
+model DocumentTemplate {
+  id            String        @id @default(uuid()) @db.Uuid
+  businessId    String        @db.Uuid
+  documentType  DocumentType
+  name          String
+  designVariant DesignVariant @default(MODERN)
+  pageSize      String        @default("A4")
+  isDefault     Boolean       @default(false)
+  config        Json          @default("{}")
+  isActive      Boolean       @default(true)
+  business      Business      @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  documents     Document[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@unique([businessId, documentType, name])
+  @@index([businessId, documentType, isDefault])
+}
+
+model AuditLog {
+  id         String    @id @default(uuid()) @db.Uuid
+  userId     String    @db.Uuid
+  documentId String?   @db.Uuid
+  action     String
+  details    Json      @default("{}")
+  user       User      @relation(fields: [userId], references: [id], onDelete: Restrict)
+  document   Document? @relation(fields: [documentId], references: [id], onDelete: SetNull)
+  createdAt  DateTime  @default(now())
+
+  @@index([documentId, createdAt])
+  @@index([userId, createdAt])
+}

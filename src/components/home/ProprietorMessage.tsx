@@ -34,7 +34,7 @@ export default function ProprietorMessage() {
               </p>
 
               <p className="mb-8 font-medium leading-relaxed text-ati-navy">
-                "{proprietor.closing}"
+                &ldquo;{proprietor.closing}&rdquo;
               </p>
 
               <div>

@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Admin document management
+
+The existing public website remains at its current routes. The business document workspace is available at `/admin`, with sign-in at `/admin/login`.
+
+For local setup and implementation status, see [docs/ADMIN_IMPLEMENTATION.md](docs/ADMIN_IMPLEMENTATION.md). Database setup requires PostgreSQL and values copied from `.env.example`; the initial migration is under `prisma/migrations/`.
+
 ## Getting Started
 
 First, run the development server:
